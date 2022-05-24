@@ -8,6 +8,7 @@
 
 let avgTeamAleeza = (89 + 120 + 103) / 3;
 let avgTeamLis = (116 + 94 + 123) / 3;
+console.log(`The average score of team Aleeza is: ${avgTeamAleeza} and The average score of team Lis is: ${avgTeamLis} `);
 
 // Test score to check 1-c condition
 /*  let avgTeamAleeza = (89+120+151)/3;
@@ -32,8 +33,9 @@ if (avgTeamAleeza > avgTeamLis) {
 }
 
 let avgTeamMary = (97 + 134 + 105) / 3;
+console.log(`The average score of team Mary is: ${avgTeamMary}`);
 
-// checking the condition if all ahave same average scores
+// checking the condition if all have same average scores
 
 /* let avgTeamAleeza = (100+100+100)/3;
 let avgTeamLis = (100+100+100)/3; 
@@ -83,11 +85,11 @@ console.log(result);
 //Rewrite the code below to use the ternary operator (?:) (you should be able to condense the if-else logic into one line).
 /* if (score > 1337)
 {
-    msg = "This is a new highscore!";
+    msg = "This is a new high score!";
 }
 else
 {
-    msg = "You need more points to beat the highscore!";
+    msg = "You need more points to beat the high score!";
 } */
 
 /* _________________________________ */
@@ -96,9 +98,14 @@ let score = 42;
 let msg = "";
 
 //write your code here
-score > 1337
-  ? (msg = "This is a new highscore!")
-  : (msg = "You need more points to beat the highscore!");
+/* score > 1337
+  ? (msg = "This is a new high score!")
+  : (msg = "You need more points to beat the high score!"); */
+
+msg =
+  score > 1337
+    ? "This is a new high score!"
+    : "You need more points to beat the high score!";
 console.log(msg);
 
 /* _________________________________ */
@@ -121,15 +128,23 @@ if (login == 'Employee') {
 /* _________________________________ */
 
 //write your code here
-let message;
+/* let message; */
 let login = "Director";
-login == "Employee"
+/* login == "Employee"
   ? (message = "Hello")
   : login == "Director"
   ? (message = "Greetings")
   : login == ""
   ? (message = "No login")
-  : (message = "Nothing");
+  : (message = "Nothing"); */
+let message =
+  login === "Employee"
+    ? "Hello"
+    : login === "Director"
+    ? "Greetings"
+    : login === ""
+    ? "No login"
+    : "D";
 
 console.log(message);
 
@@ -140,7 +155,7 @@ console.log(message);
 const isDog = true;
 const printMessage = isDog ? "pat, pat" : "find me a dog to pat!";
 console.log(printMessage);
-/* 2. Declare a variable named speedCheck. If speedlimit is 50km/h, and your speed is above that, print 'you're going too fast!'. If speed is lower than 50km/h, print 'You're driving below the speed limit, Oma'. */
+/* 2. Declare a variable named speedCheck. If speed limit is 50km/h, and your speed is above that, print 'you're going too fast!'. If speed is lower than 50km/h, print 'You're driving below the speed limit, Oma'. */
 const speedCheck = 50;
 
 const speedMessage =
@@ -223,7 +238,7 @@ if (determiner >= 0) {
 }
 
 /* console.log(`The message value: ${message}`); */
-// as variable message is defined in block {} so it have a block sope and can can be accessed out of its if block. Whereas the variable determiner has global scope and be accessed everywhere
+// as variable message is defined in block {} so it have a block scope and can can be accessed out of its if block. Whereas the variable determiner has global scope and be accessed everywhere
 if (determiner < 0) {
   updater = "Less than 0";
 }
@@ -233,7 +248,7 @@ console.log(`The updater value: ${updater}`);
  * When do you use a ternary v.s. an if statement? Give an example. */
 
 // Ternary operator is similar to if-else statement but with ternary operator we can write code in one line compared to if-else statement
-// Ternary operator is an expression and we can write it in template litzerals like as below.
+// Ternary operator is an expression and we can write it in template literals like as below.
 let age1 = 18;
 console.log(`Can I drive? ${age1 >= 18 ? "YES" : "NO"}`);
 
